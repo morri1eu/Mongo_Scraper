@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Saved Articles</h1>
+    <p class="lead">Check out your saved articles.</p>
+  </div>
+</div>
+{{#each Articles}}
+    <div class="container">
+        <a href="{{this.link}}"><div class="row">
+            <div class="col-md-10">
+            <h3>{{this.title}}</h3></div></a>
+                <button id="{{this._id}}" style="float:right" type="button" class="col-md-2 btn btn-danger">Remove from Saved</button>
+        </div>
+        <a href="{{this.link}}"><div class="row">
+            <p>{{this.summary}}</p>
+        </div>
+        </a>
+    </div>
+{{/each}}
